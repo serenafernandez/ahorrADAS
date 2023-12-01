@@ -8,7 +8,7 @@ AhorrADAs es un proyecto desarrollado por dos estudiantes apasionadas por el des
 
 - **Seguimiento de Gastos:** AhorrADAs facilita el seguimiento de los gastos diarios, semanales y mensuales, proporcionando una visión clara del estado financiero.
 
-- **Descarga del Balance:** Pensamos en añadir un botón de descarga en la sección balance, priorizando la experiencia del usuario para que pueda conservar los datos ingresados también en su computadora.
+- **Descarga del Reporte:** Pensamos en añadir un botón de descarga en la sección reportes, priorizando que el usuario pueda conservar los datos ingresados.
 
 ## Tecnologías Utilizadas
 
