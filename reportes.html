@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,33 +14,200 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- icomoon's embed -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/svgxuse.js"></script>
+    <script defer src="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/svgxuse.js"></script>
 </head>
+
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!-- HEADER -->
-    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
+    <header
+        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
         <section class="w-1/4 flex items-center text-5xl drop-shadow-md font-extrabold justify-between">
-            <svg class="icon icon-calculator"><use xlink:href="#icon-calculator"></use></svg>
+            <svg class="icon icon-calculator">
+                <use xlink:href="#icon-calculator"></use>
+            </svg>
             <h1>AhorrADAs</h1>
         </section>
         <!-- NAVIGATION -->
         <nav>
             <!-- BALANCE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
-                <a href="./index.html"><svg class="icon icon-stats-bars"><use xlink:href="#icon-stats-bars"></use></svg> Balance</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
+                <a href="./index.html"><svg class="icon icon-stats-bars">
+                        <use xlink:href="#icon-stats-bars"></use>
+                    </svg> Balance</a>
             </button>
             <!-- CATEGORIAS -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./categorias.html"><svg class="icon icon-stack"><use xlink:href="#icon-stack"></use></svg> Categorias</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
+                <a href="./categorias.html"><svg class="icon icon-stack">
+                        <use xlink:href="#icon-stack"></use>
+                    </svg> Categorias</a>
             </button>
             <!-- REPORTE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./reportes.html"><svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg> Reporte</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
+                <a href="./reportes.html"><svg class="icon icon-book">
+                        <use xlink:href="#icon-book"></use>
+                    </svg> Reporte</a>
             </button>
         </nav>
     </header>
+    <!-- REPORTES -->
+    <section id="vista-reportes" class="mx-auto my-12">
+        <div class="max-w-xl mx-auto rounded-lg">
+            <div class="flex flex-col items-center shadow-xl hidden">
+                <h2 class="text-3xl font-semibold mb-4">Reportes</h2>
+                <!-- SIN REPORTES -->
+                <div id="sin-reportes">
+                    <figure class="place-content-center p-10">
+                        <img src="img/undraw_charts_re_5qe9.svg" alt="" class="w-96 h-auto">
+                    </figure>
+                    <h4 class="text-2xl font-semibold text-center pb-3">Operaciones insuficientes</h4>
+                    <p class="text-sm font-extralight text-center pb-6">
+                        Prueba agregando más operaciones
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <section id="" class="mx-auto my-12">
+            <div class="max-w-7xl mx-auto rounded-lg p-8 lg:p-12 xl:p-16">
+                <h2 class="font-black text-4xl lg:text-5xl mb-4">Reportes</h2>
+
+                <!-- CON REPORTES -->
+                <div id="con-reportes" class="mx-auto mt-8 lg:mt-12 xl:mt-16 max-w-7xl shadow-xl p-4 lg:p-8 xl:p-12">
+                    <section id="resumen" class="space-y-4">
+                        <h4 class="text-lg font-semibold">Resumen</h4>
+                        <!-- CATEGORÍA MAYOR GANANCIA -->
+                        <div class="flex items-center p-1">
+                            <div class="font-semibold w-1/4">Categoría con mayor ganancia</div>
+                            <div class="flex-1 text-right">
+                                <div class="w-2/3">
+                                    <span id="categoria-mayor-ganancia"
+                                        class="text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1 whitespace-nowrap overflow-hidden">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="whitespace-nowrap overflow-hidden text-green-600"
+                                    id="categoria-mayor-ganancia-total">+$50000</div>
+                            </div>
+                        </div>
+
+                        <!-- CATEGORÍA MAYOR GASTO -->
+                        <div class="flex items-center p-1">
+                            <div class="font-semibold w-1/4">Categoría con mayor gasto</div>
+                            <div class="flex-1 text-right">
+                                <div class="w-2/3">
+                                    <span id="categoria-mayor-gasto"
+                                        class="text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1 whitespace-nowrap overflow-hidden">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="whitespace-nowrap overflow-hidden text-red-600"
+                                    id="categoria-mayor-gasto-total">-$50000</div>
+                            </div>
+                        </div>
+
+                        <!-- CATEGORÍA MAYOR BALANCE -->
+                        <div class="flex items-center p-1">
+                            <div class="font-semibold w-1/4">Categoría con mayor balance</div>
+                            <div class="flex-1 text-right">
+                                <div class="w-2/3">
+                                    <span id="categoria-mayor-balance"
+                                        class="text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1 whitespace-nowrap overflow-hidden">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="whitespace-nowrap overflow-hidden" id="categoria-mayor-balance-total">$50000
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- MES CON MAYOR GANANCIA -->
+                        <div class="flex items-center p-1">
+                            <div class="font-semibold w-1/4">Mes con mayor ganancia</div>
+                            <div class="flex-1 text-right">
+                                <div class="w-2/3">
+                                    <span id="mes-mayor-ganancia"
+                                        class="whitespace-nowrap overflow-hidden">2023/12/01</span>
+                                </div>
+                                <div class="whitespace-nowrap overflow-hidden text-green-600"
+                                    id="mes-mayor-ganancia-total">$50000</div>
+                            </div>
+                        </div>
+
+                        <!-- MES CON MAYOR GASTO -->
+                        <div class="flex items-center p-1">
+                            <div class="font-semibold w-1/4">Mes con mayor gasto</div>
+                            <div class="flex-1 text-right">
+                                <div class="w-2/3">
+                                    <span id="mes-mayor-gasto"
+                                        class="whitespace-nowrap overflow-hidden">2023/04/04</span>
+                                </div>
+                                <div class="whitespace-nowrap overflow-hidden text-red-600" id="mes-mayor-gasto-total">
+                                    -$50000</div>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+                    <!-- TOTALES POR CATEGORÍA -->
+                    <section class="space-y-4">
+                        <h4 class="text-lg font-semibold mt-12">Totales por categoría</h4>
+                        <div id="totales-categoria-reporte" class="flex items-center">
+                            <div class="w-1/4">
+                                <h4 class="font-semibold">Categoría</h4>
+                                <div class="font-semibold whitespace-nowrap overflow-hidden">Category placeholder</div>
+                            </div>
+                            <div class="w-3/4 flex space-x-4">
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-right">Ganancias</h4>
+                                    <div class="text-green-600 whitespace-nowrap overflow-hidden text-right">+$8000
+                                    </div>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-right">Gastos</h4>
+                                    <div class="text-red-600 whitespace-nowrap overflow-hidden text-right">-$0</div>
+                                </div>
+                                <div class="flex-1">
+                                    <h4 class="font-semibold text-right">Balance</h4>
+                                    <div class="whitespace-nowrap overflow-hidden text-right">+$90000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TOTALES POR MES -->
+                    <section class="space-y-4">
+                        <h3 class="text-lg font-semibold mt-12">Totales por mes</h3>
+                        <div class="flex items-center">
+                            <div class="w-1/4">
+                                <h4 class="font-semibold">Mes</h4>
+                                <h3 class="font-semibold whitespace-nowrap">12/03</h3>
+                            </div>
+                            <div class="w-3/4 flex space-x-4">
+                                <div class="flex-1 text-right">
+                                    <h4 class="font-semibold">Ganancias</h4>
+                                    <div class="text-green-600 whitespace-nowrap">+$60000</div>
+                                </div>
+                                <div class="flex-1 text-right">
+                                    <h4 class="font-semibold">Gastos</h4>
+                                    <div class="text-red-600 whitespace-nowrap">-$10000</div>
+                                </div>
+                                <div class="flex-1 text-right">
+                                    <h4 class="font-semibold">Balance</h4>
+                                    <div class="whitespace-nowrap">+$50000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </section>
+
     <!-- project's script -->
     <script src="./js/main.js"></script>
 </body>
+
 </html>
