@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,33 +14,81 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- icomoon's embed -->
     <link rel="stylesheet" href="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/svgxuse.js"></script>
+    <script defer src="https://i.icomoon.io/public/temp/67790d3892/UntitledProject/svgxuse.js"></script>
 </head>
+
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!-- HEADER -->
-    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
+    <header
+        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
         <section class="w-1/4 flex items-center text-5xl drop-shadow-md font-extrabold justify-between">
-            <svg class="icon icon-calculator"><use xlink:href="#icon-calculator"></use></svg>
+            <svg class="icon icon-calculator">
+                <use xlink:href="#icon-calculator"></use>
+            </svg>
             <h1>AhorrADAs</h1>
         </section>
         <!-- NAVIGATION -->
         <nav>
             <!-- BALANCE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
-                <a href="./index.html"><svg class="icon icon-stats-bars"><use xlink:href="#icon-stats-bars"></use></svg> Balance</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
+                <a href="./index.html"><svg class="icon icon-stats-bars">
+                        <use xlink:href="#icon-stats-bars"></use>
+                    </svg> Balance</a>
             </button>
             <!-- CATEGORIAS -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./categorias.html"><svg class="icon icon-stack"><use xlink:href="#icon-stack"></use></svg> Categorias</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
+                <a href="./categorias.html"><svg class="icon icon-stack">
+                        <use xlink:href="#icon-stack"></use>
+                    </svg> Categorias</a>
             </button>
             <!-- REPORTE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./reportes.html"><svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg> Reporte</a>
+            <button
+                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
+                <a href="./reportes.html"><svg class="icon icon-book">
+                        <use xlink:href="#icon-book"></use>
+                    </svg> Reporte</a>
             </button>
         </nav>
     </header>
+
+    <section class="flex items-center min-h-screen">
+        <div class="container mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 shadow-xl p-8">
+            <div class="container-form-elements">
+                <h2 class="font-bold text-4xl mb-8">Categorías</h2>
+                <label class="font-semibold">Nombre</label>
+                <div class="flex mt-1 mb-4">
+                    <div class="flex-grow">
+                        <input type="text" name="" id=""
+                            class="w-full border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <button
+                            class="button h-full text-sm text-white bg-green-500 hover:bg-green-600 rounded p-2 ml-2"
+                            id="">
+                            <span id="">Agregar</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="" class="flex justify-between mt-10">
+                    <div>
+                        <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                            placeholder</span>
+                    </div>
+                    <div class="mb-2">
+                        <a href="#"
+                            class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1">Editar</a>
+                        <a href="#"
+                            class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1">Eliminar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- project's script -->
     <script src="./js/main.js"></script>
 </body>
+
 </html>
