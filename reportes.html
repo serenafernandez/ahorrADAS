@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
     <!-- tailwind's CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- icomoon's embed -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/3047b3894b/UntitledProject/style-svg.css">
-    <script defer src="https://i.icomoon.io/public/temp/3047b3894b/UntitledProject/svgxuse.js"></script>
+    <!-- google icon's embed link-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
     <!-- download library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
         integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
@@ -23,42 +22,55 @@
         integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
-<body class="w-full h-screen mb-8 bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
+<body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!-- HEADER -->
-    <header
-        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
+    <header class="h-24 w-screen p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
-        <section class="w-1/4 flex items-center text-5xl drop-shadow-md font-extrabold justify-between">
-            <svg class="icon icon-calculator">
-                <use xlink:href="#icon-calculator"></use>
-            </svg>
-            <h1>AhorrADAs</h1>
+        <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
+            <span class="material-icons" style="font-size:250%;">
+                calculate
+            </span>
+            <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
         <!-- NAVIGATION -->
-        <nav>
-            <!-- BALANCE -->
-            <button
-                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
-                <a href="./index.html"><svg class="icon icon-stats-bars">
-                        <use xlink:href="#icon-stats-bars"></use>
-                    </svg> Balance</a>
-            </button>
-            <!-- CATEGORIAS -->
-            <button
-                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./categorias.html"><svg class="icon icon-stack">
-                        <use xlink:href="#icon-stack"></use>
-                    </svg> Categorias</a>
-            </button>
-            <!-- REPORTE -->
-            <button
-                class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./reportes.html"><svg class="icon icon-book">
-                        <use xlink:href="#icon-book"></use>
-                    </svg> Reporte</a>
-            </button>
-        </nav>
+        <button class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+            <span class="material-icons">
+                close
+            </span>
+        </button>
+        <button class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+            <span class="material-icons">
+                menu
+            </span>
+        </button>
+        <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
+            <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
+                <!-- BALANCE -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./index.html">
+                        <span class="material-icons">
+                            account_balance_wallet
+                        </span>
+                        Balance</a>
+                </button>
+                <!-- CATEGORIAS -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./categorias.html">
+                        <span class="material-icons">
+                            layers
+                        </span>
+                    Categorias</a>
+                </button>
+                <!-- REPORTES -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./reportes.html">
+                        <span class="material-icons">
+                            menu_book
+                        </span>
+                    Reportes</a>
+                </button>
+            </nav>
+        </div>
     </header>
     <!-- REPORTES -->
     <section class="mx-auto my-12">

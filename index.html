@@ -11,34 +11,133 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
     <!-- tailwind's CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- icomoon's embed -->
-    <link rel="stylesheet" href="https://i.icomoon.io/public/temp/3047b3894b/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/3047b3894b/UntitledProject/svgxuse.js"></script>
+    <!-- google icon's embed link-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
 </head>
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!-- HEADER -->
-    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex justify-between items-center text-[#FFF7AD]">
+    <header class="h-24 w-screen p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
-        <section class="w-1/4 flex items-center text-5xl drop-shadow-md font-extrabold justify-between">
-            <svg class="icon icon-calculator"><use xlink:href="#icon-calculator"></use></svg>
-            <h1>AhorrADAs</h1>
+        <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
+            <span class="material-icons" style="font-size:250%;">
+                calculate
+            </span>
+            <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
         <!-- NAVIGATION -->
-        <nav>
-            <!-- BALANCE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD]  text-lg">
-                <a href="./index.html"><svg class="icon icon-stats-bars"><use xlink:href="#icon-stats-bars"></use></svg> Balance</a>
-            </button>
-            <!-- CATEGORIAS -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./categorias.html"><svg class="icon icon-stack"><use xlink:href="#icon-stack"></use></svg> Categorias</a>
-            </button>
-            <!-- REPORTE -->
-            <button class="border rounded-xl border-solid border-fuchsia-400 font-bold py-2 px-5 mr-2 hover:shadow-md hover:shadow-[#FFF7AD] text-lg">
-                <a href="./reportes.html"><svg class="icon icon-book"><use xlink:href="#icon-book"></use></svg> Reporte</a>
-            </button>
-        </nav>
+        <button class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+            <span class="material-icons">
+                close
+            </span>
+        </button>
+        <button class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+            <span class="material-icons">
+                menu
+            </span>
+        </button>
+        <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
+            <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
+                <!-- BALANCE -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./index.html">
+                        <span class="material-icons">
+                            account_balance_wallet
+                        </span>
+                        Balance</a>
+                </button>
+                <!-- CATEGORIAS -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./categorias.html">
+                        <span class="material-icons">
+                            layers
+                        </span>
+                    Categorias</a>
+                </button>
+                <!-- REPORTES -->
+                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" href="./reportes.html">
+                        <span class="material-icons">
+                            menu_book
+                        </span>
+                    Reportes</a>
+                </button>
+            </nav>
+        </div>
     </header>
+    <main class="my-5 flex items-start justify-evenly min-h-screen">
+        <section class="h-full mx-auto flex flex-col md:w-1/4">
+            <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
+                <h2 class="mb-8 font-bold text-4xl">Balance</h2>
+                <div class="flex flex-row justify-between items-start">
+                    <h3 class="text-xl font-bold">Ganacias</h3>
+                    <p class="text-xl text-green-300">+$0</p>
+                </div>
+                <div class="flex flex-row justify-between items-start">
+                    <h3 class="text-xl font-bold">Gastos</h3>
+                    <p class="text-xl text-red-300">-$0</p>
+                </div>
+                <div class="flex flex-row justify-between items-start">
+                    <h3 class="text-2xl font-bold">Total</h3>
+                    <p class="text-xl font-bold">+$0</p>
+                </div>
+            </article>
+            <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
+                <div class="w-full flex flex-row justify-evenly items-center">
+                    <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
+                    <a href="#">Ocultar Filtros</a>
+                </div>
+                <div class="w-full flex flex-col justify-evenly items-start">
+                    <h3 class="text-lg font-bold">Tipo</h3>
+                    <select name="tipo" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                        <option value="Todos">Todos</option>
+                        <option value="Gasto">Gasto</option>
+                        <option value="Ganancia">Ganancia</option>
+                    </select>
+                </div>
+                <div class="w-full flex flex-col justify-evenly items-start">
+                    <h3 class="text-lg font-bold">Categorias</h3>
+                    <select name="categorias" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                        <option value="Todas">Todas</option>
+                        <option value="Comida">Comida</option>
+                        <option value="Trabajo">Trabajo</option>
+                        <option value="Servicios">Servicios</option>
+                    </select>
+                </div>
+                <div class="w-full flex flex-col justify-evenly items-start">
+                    <h3 class="text-lg font-bold">Desde</h3>
+                    <input type="date" name="" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                </div>
+                <div class="w-full flex flex-col justify-evenly items-start">
+                    <h3 class="text-lg font-bold">Ordenar por</h3>
+                    <select name="" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                        <option value="">Más reciente</option>
+                        <option value="">Menos reciente</option>
+                        <option value="">Mayor monto</option>
+                        <option value="">Menor monto</option>
+                        <option value="">A/Z</option>
+                        <option value="">Z/A</option>
+                    </select>
+                </div>
+            </article>
+        </section>
+        <section class="mx-auto flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl">
+            <div class="w-full flex flex-row justify-between">
+                <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
+                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                    <span id="add-operation-button">
+                        + Nueva operación
+                    </span>
+                </button>
+            </div>
+            <!-- SIN OPERACIONES -->
+            <figure class="p-16">
+                <img src="./img/undraw_savings_re_eq4w.svg" alt="">
+            </figure>
+            <h4 class="text-2xl font-bold">Sin resultados</h4>
+            <h3 class="text-lg">Probá agregando operaciones o cambiando los filtros</h3>
+        </section>
+    </main>
     <!-- project's script -->
     <script src="./js/main.js"></script>
 </body>
