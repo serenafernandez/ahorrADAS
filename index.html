@@ -40,7 +40,7 @@
             <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
                 <!-- BALANCE -->
                 <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" href="./index.html">
+                    <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             account_balance_wallet
                         </span>
@@ -48,7 +48,7 @@
                 </button>
                 <!-- CATEGORIAS -->
                 <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" href="./categorias.html">
+                    <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             layers
                         </span>
@@ -56,7 +56,7 @@
                 </button>
                 <!-- REPORTES -->
                 <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" href="./reportes.html">
+                    <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             menu_book
                         </span>
@@ -65,7 +65,8 @@
             </nav>
         </div>
     </header>
-    <main class="my-5 flex items-start justify-evenly min-h-screen">
+    <!-- INDEX, sección BALANCE  -->
+    <main class="mx-auto my-5 flex flex-col items-start justify-evenly min-h-screen md:flex-row">
         <section class="h-full mx-auto flex flex-col md:w-1/4">
             <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
                 <h2 class="mb-8 font-bold text-4xl">Balance</h2>
@@ -85,39 +86,59 @@
             <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
                 <div class="w-full flex flex-row justify-evenly items-center">
                     <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
-                    <a href="#">Ocultar Filtros</a>
+                    <a class="relative left-8 text-blue-500 text-center" href="#">Ocultar Filtros</a>
                 </div>
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Tipo</h3>
-                    <select name="tipo" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
-                        <option value="Todos">Todos</option>
-                        <option value="Gasto">Gasto</option>
-                        <option value="Ganancia">Ganancia</option>
-                    </select>
+                    <div class="w-full">
+                        <div class="relative w-full min-w-[200px] h-10">
+                            <select
+                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                <option value="Todos">Todos</option>
+                                <option value="Gasto">Gasto</option>
+                                <option value="Ganancia">Ganancia</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Categorias</h3>
-                    <select name="categorias" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
-                        <option value="Todas">Todas</option>
-                        <option value="Comida">Comida</option>
-                        <option value="Trabajo">Trabajo</option>
-                        <option value="Servicios">Servicios</option>
-                    </select>
+                    <div class="w-full">
+                        <div class="relative w-full min-w-[200px] h-10">
+                            <select
+                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                <option value="Todas">Todas</option>
+                                <option value="Comida">Comida</option>
+                                <option value="Trabajo">Trabajo</option>
+                                <option value="Servicios">Servicios</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Desde</h3>
-                    <input type="date" name="" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
+                    <div class="w-full">
+                        <div class="relative w-full min-w-[200px] h-10">
+                        <input type="date"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                        </div>
+                    </div>
                 </div>
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Ordenar por</h3>
-                    <select name="" id="" class="border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none">
-                        <option value="">Más reciente</option>
-                        <option value="">Menos reciente</option>
-                        <option value="">Mayor monto</option>
-                        <option value="">Menor monto</option>
-                        <option value="">A/Z</option>
-                        <option value="">Z/A</option>
-                    </select>
+                    <div class="w-full">
+                        <div class="relative w-full min-w-[200px] h-10">
+                            <select
+                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                <option value="">Más reciente</option>
+                                <option value="">Menos reciente</option>
+                                <option value="">Mayor monto</option>
+                                <option value="">Menor monto</option>
+                                <option value="">A/Z</option>
+                                <option value="">Z/A</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
@@ -138,7 +159,350 @@
             <h3 class="text-lg">Probá agregando operaciones o cambiando los filtros</h3>
         </section>
     </main>
+    <!-- CATEGORÍAS  -->
+    <main class="flex items-center min-h-screen">
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
+            <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
+            <label for="category-name" class="font-semibold">Nombre</label>
+            <div class="flex mt-1 mb-4">
+                <div class="flex-grow">
+                    <input type="text" name="category-name"
+                        class="w-full border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none"
+                        id="add-category-input">
+                </div>
+                <div>
+                    <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                        <span id="add-category-button">Agregar</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex justify-between mt-10 hidden">
+                <li class="list-none">
+                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                        placeholder</span>
+                </li>
+                <div class="mb-2">
+                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                        id="edit-category">
+                        Editar
+                    </a>
+                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                        id="delete-category">
+                        Eliminar
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- REPORTES -->
+    <main class="mx-auto my-12">
+        <section class="max-w-2xl mx-auto rounded-lg mt-auto min-h-screen">
+            <div class="flex flex-col items-center shadow-xl">
+                <h2 class="text-4xl font-semibold">Reportes</h2>
+                <!-- SIN REPORTES -->
+                <div>
+                    <figure class="place-content-center p-16">
+                        <img src="img/undraw_charts_re_5qe9.svg" alt="" class="w-full h-auto">
+                    </figure>
+                    <h4 class="pb-3 text-3xl font-semibold text-center">Operaciones insuficientes
+                    </h4>
+                    <p class="pb-6 text-lg font-extralight text-center">
+                        Prueba agregando más operaciones
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CON REPORTES -->
+        <section class="mx-auto max-w-6xl rounded-lg p-8 lg:p-12 xl:p-16 hidden">
+            <h2 class="mb-4 font-black text-4xl lg:text-5xl">Reportes</h2>
+            <div class="mx-auto mt-8 lg:mt-12 xl:mt-16 p-4 lg:p-8 xl:p-12 shadow-xl">
+                <section class="space-y-4">
+                    <h4 class="text-lg font-semibold">Resumen</h4>
+                    <!-- CATEGORÍA MAYOR GANANCIA -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor ganancia</div>
+                        <div class="flex-1 text-right">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span id="categoria-mayor-ganancia"
+                                        class="text-xs text-orange-400 bg-orange-100 px-2 py-1 rounded-md whitespace-nowrap overflow-hidden">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden text-green-600"
+                                        id="categoria-mayor-ganancia-total">$50000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA MAYOR GASTO -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor gasto</div>
+                        <div class="flex-1 text-right">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span
+                                        class="px-2 py-1 text-xs text-orange-400 bg-orange-100 rounded-md whitespace-nowrap overflow-hidden"
+                                        id="categoria-mayor-gasto">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden text-red-600"
+                                        id="categoria-mayor-gasto-total">-$50000
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CATEGORÍA MAYOR BALANCE -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor balance</div>
+                        <div class="flex-1 text-right">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span
+                                        class="px-2 py-1 text-xs text-orange-400 bg-orange-100 rounded-md whitespace-nowrap overflow-hidden"
+                                        id="categoria-mayor-balance">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden"
+                                        id="categoria-mayor-balance-total">$50000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MES CON MAYOR GANANCIA -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Mes con mayor ganancia</div>
+                        <div class="flex-1 text-right">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span class="whitespace-nowrap overflow-hidden"
+                                        id="mes-mayor-ganancia">2023/12/01</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden text-green-600"
+                                        id="mes-mayor-ganancia-total">$50000
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MES CON MAYOR GASTO -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Mes con mayor gasto</div>
+                        <div class="flex-1 text-right">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span class="whitespace-nowrap overflow-hidden"
+                                        id="mes-mayor-gasto">2023/04/04</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden text-red-600"
+                                        id="mes-mayor-gasto-total">-$50000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TOTALES POR CATEGORÍA -->
+                <section class="space-y-4">
+                    <h4 class="text-lg font-semibold mt-12 pb-2">Totales por categoría</h4>
+                    <div class="flex items-center">
+                        <div class="w-1/4">
+                            <h4 class="font-semibold pb-2">Categoría</h4>
+                            <div class="flex items-center pt-2">
+                                <span
+                                    class="px-2 py-1 text-xs text-orange-400 bg-orange-100 rounded-md whitespace-nowrap overflow-hidden"
+                                    id="totales-por-categoria">
+                                    Category placeholder
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-3/4 flex space-x-4">
+                            <div class="flex-1">
+                                <h4 class="pb-2 font-semibold text-right">Ganancias</h4>
+                                <div class="flex items-center justify-end p-2 text-green-600"
+                                    id="totales-categoria-ganancias">
+                                    +$8000
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-right pb-2">Gastos</h4>
+                                <div class="flex items-center justify-end pt-2 text-red-600"
+                                    id="totales-categoria-gastos">
+                                    -$0
+                                </div>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-right pb-2">Balance</h4>
+                                <div class="flex items-center justify-end pt-2" id="totales-categoria-balance">
+                                    +$90000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TOTALES POR MES -->
+                <section class="space-y-4">
+                    <h3 class="text-lg font-semibold mt-12">Totales por mes</h3>
+                    <div class="flex items-center">
+                        <div class="w-1/4">
+                            <h4 class="font-semibold">Mes</h4>
+                            <div class="flex items-center pt-2 font-semibold" id="totales-mes">
+                                12/03
+                            </div>
+                        </div>
+                        <div class="w-3/4 flex space-x-4">
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Ganancias</h4>
+                                <div class="flex items-center justify-end pt-2 text-green-600"
+                                    id="totales-mes-ganancias">
+                                    +$60000
+                                </div>
+                            </div>
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Gastos</h4>
+                                <div class="flex items-center justify-end pt-2 text-red-600" id="totales-mes-gastos">
+                                    -$10000
+                                </div>
+                            </div>
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Balance</h4>
+                                <div class="flex items-center justify-end pt-2" id="totales-mes-balance">
+                                    +$50000
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="text-white text-center bg-pink-500 rounded">
+                <button id="download-button">
+                    Descargar reporte
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- NUEVA OP / EDITAR OP -->
+    <main class="flex items-center min-h-screen">
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
+            <div>
+                <h3 class="text-lg font-bold">Descripción</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                    <input
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Monto</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                    <input type="number"
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>  
+                <h3 class="text-lg font-bold">Tipo</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Gasto</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Categoría</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Comida</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Fecha</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10 mb-4">
+                    <input type="date"
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex self-end">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
+                    <span id="cancel-newoperation-button">Cancelar</span>
+                </button>
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                    <span id="add-newoperation-button">Agregar</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <main class="flex items-center min-h-screen hidden" id="editar-op">
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
+            <div>
+                <h3 class="text-lg font-bold">Descripción</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                    <input
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Monto</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                    <input type="number"
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>  
+                <h3 class="text-lg font-bold">Tipo</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Gasto</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Categoría</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Comida</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Fecha</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10 mb-4">
+                    <input type="date"
+                        class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"/>
+                    </div>
+                </div>
+            </div>
+            <div class="flex self-end">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
+                    <span id="cancel-editoperation-button">Cancelar</span>
+                </button>
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                    <span id="add-editoperation-button">Editar</span>
+                </button>
+            </div>
+        </section>
+    </main>
     <!-- project's script -->
     <script src="./js/main.js"></script>
 </body>
+
 </html>
