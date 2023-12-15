@@ -18,8 +18,7 @@
 
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!--------------------------------------------HEADER-------------------------------------------->
-    <header
-        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
+    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
         <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
             <span class="material-icons" style="font-size:250%;">
@@ -44,8 +43,7 @@
             <nav
                 class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
                 <!-- BALANCE -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             account_balance_wallet
@@ -53,8 +51,7 @@
                         Balance</a>
                 </button>
                 <!-- CATEGORIAS -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             layers
@@ -62,8 +59,7 @@
                         Categorias</a>
                 </button>
                 <!-- REPORTES -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
                             menu_book
@@ -183,60 +179,54 @@
                             <th>Acciones</th>
                         </table>
                     </div>
-                </section>
+                </section>    
                 <section class="pt-10 pl-3" id="balance-operaciones">
-                    <div class="w-full flex flex-row justify-between">
-                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                            <h6 class="text-md font-bold mr-5">Super</h6>
-                            <li class="list-none">
-                                <span
-                                    class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                    placeholder</span>
-                            </li>
-                        </div>
-                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                            <h6 class="text-md">21/12/2023</h6>
-                            <h6 class="text-md text-red-500" id="monto-gasto">- 60000</h6>
-                            <div class="mb-2">
-                                <a href="#"
-                                    class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="edit-operation">
-                                    Editar
-                                </a>
-                                <a href="#"
-                                    class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="delete-operation">
-                                    Eliminar
-                                </a>
+                        <div class="w-full flex flex-row justify-between">
+                            <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
+                                <h6 class="text-md font-bold mr-5">Super</h6>
+                                <li class="list-none">
+                                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                                        placeholder</span>
+                                </li>
+                            </div>
+                            <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
+                                <h6 class="text-md">21/12/2023</h6>
+                                <h6 class="text-md text-red-500" id="monto-gasto">- 60000</h6>
+                                <div class="mb-2">
+                                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                        id="edit-operation">
+                                        Editar
+                                    </a>
+                                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                        id="delete-operation">
+                                        Eliminar
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full flex justify-between">
-                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                            <h6 class="text-md font-bold mr-5">Sueldo</h6>
-                            <li class="list-none">
-                                <span
-                                    class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                    placeholder</span>
-                            </li>
-                        </div>
-                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                            <h6 class="text-md">1/12/2023</h6>
-                            <h6 class="text-md text-green-500" id="monto-ganancia">+ 200000</h6>
-                            <div class="mb-2">
-                                <a href="#"
-                                    class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="edit-operation">
-                                    Editar
-                                </a>
-                                <a href="#"
-                                    class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="delete-operation">
-                                    Eliminar
-                                </a>
+                        <div class="w-full flex justify-between">
+                            <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
+                                <h6 class="text-md font-bold mr-5">Sueldo</h6>
+                                <li class="list-none">
+                                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                                        placeholder</span>
+                                </li>
+                            </div>
+                            <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
+                                <h6 class="text-md">1/12/2023</h6>
+                                <h6 class="text-md text-green-500" id="monto-ganancia">+ 200000</h6>
+                                <div class="mb-2">
+                                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                        id="edit-operation">
+                                        Editar
+                                    </a>
+                                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                        id="delete-operation">
+                                        Eliminar
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </section>
             </section>
         </section>
