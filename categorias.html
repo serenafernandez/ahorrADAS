@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,13 @@
     <!-- tailwind's CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- google icon's embed link-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!-- HEADER -->
-    <header class="h-24 w-screen p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
+    <header
+        class="h-24 w-screen p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
         <!-- TITLE -->
         <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
             <span class="material-icons" style="font-size:250%;">
@@ -26,20 +28,24 @@
             <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
         <!-- NAVIGATION -->
-        <button class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+        <button
+            class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 close
             </span>
         </button>
-        <button class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+        <button
+            class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 menu
             </span>
         </button>
         <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
-            <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
+            <nav
+                class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
                 <!-- BALANCE -->
-                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button
+                    class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly" href="./index.html">
                         <span class="material-icons">
                             account_balance_wallet
@@ -47,27 +53,29 @@
                         Balance</a>
                 </button>
                 <!-- CATEGORIAS -->
-                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button
+                    class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly" href="./categorias.html">
                         <span class="material-icons">
                             layers
                         </span>
-                    Categorias</a>
+                        Categorias</a>
                 </button>
                 <!-- REPORTES -->
-                <button class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                <button
+                    class="p-2.5 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly" href="./reportes.html">
                         <span class="material-icons">
                             menu_book
                         </span>
-                    Reportes</a>
+                        Reportes</a>
                 </button>
             </nav>
         </div>
     </header>
 
-    <section class="flex items-center min-h-screen">
-        <div class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
+    <main class="flex items-center min-h-screen">
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
             <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
             <label for="category-name" class="font-semibold">Nombre</label>
             <div class="flex mt-1 mb-4">
@@ -82,7 +90,7 @@
                     </button>
                 </div>
             </div>
-            <div class="flex justify-between mt-10">
+            <div class="flex justify-between mt-10 hidden">
                 <li class="list-none">
                     <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
                         placeholder</span>
@@ -98,8 +106,8 @@
                     </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
     <!-- project's script -->
     <script src="./js/main.js"></script>
 </body>
