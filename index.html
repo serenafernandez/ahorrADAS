@@ -17,7 +17,7 @@
 </head>
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!--------------------------------------------HEADER-------------------------------------------->
-    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]">
+    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]" id="header">
         <!-- TITLE -->
         <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
             <span class="material-icons" style="font-size:250%;">
@@ -25,20 +25,22 @@
             </span>
             <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
-        <!-- NAVIGATION -->
+        <!-- CLOSE MENU BUTTON -->
         <button class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 close
             </span>
         </button>
+        <!-- OPEN MENU BUTTON -->
         <button class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 menu
             </span>
         </button>
+        <!-- NAVIGATION -->
         <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
             <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
-                <!-- BALANCE -->
+                <!-- BALANCE BUTTON-->
                 <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
@@ -46,7 +48,7 @@
                         </span>
                         Balance</a>
                 </button>
-                <!-- CATEGORIAS -->
+                <!-- CATEGORIES BUTTON -->
                 <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
@@ -54,7 +56,7 @@
                         </span>
                     Categorias</a>
                 </button>
-                <!-- REPORTES -->
+                <!-- REPORTS BUTTON -->
                 <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
                     <a class="flex items-center justify-evenly">
                         <span class="material-icons">
@@ -66,28 +68,38 @@
         </div>
     </header>
     <!--------------------------------------------BALANCE-------------------------------------------->
-    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row">
+    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row" id="balance">
+        <!-- BALANCE AND FILTERS SECTION -->
         <section class="w-1/4 mx-auto flex flex-col md:mx-0">
+            <!-- BALANCE RESUME -->
             <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
+                <!-- BALANCE RESUME TITLE -->
                 <h2 class="mb-8 font-bold text-4xl">Balance</h2>
+                <!-- EARNINGS -->
                 <div class="flex flex-row justify-between items-start">
                     <h3 class="text-xl font-bold">Ganacias</h3>
                     <p class="text-xl text-green-300">+$0</p>
                 </div>
+                <!-- EXPENSES -->
                 <div class="flex flex-row justify-between items-start">
                     <h3 class="text-xl font-bold">Gastos</h3>
                     <p class="text-xl text-red-300">-$0</p>
                 </div>
+                <!-- TOTAL -->
                 <div class="flex flex-row justify-between items-start">
                     <h3 class="text-2xl font-bold">Total</h3>
                     <p class="text-xl font-bold">+$0</p>
                 </div>
             </article>
+            <!-- FILTERS -->
             <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
+                <!-- FILTERS TITLE AND TOGGLE -->
                 <div class="w-full flex flex-row justify-evenly items-center">
                     <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
+                    <a class="relative left-8 text-blue-500 text-center hidden" href="#">Mostrar Filtros</a>
                     <a class="relative left-8 text-blue-500 text-center" href="#">Ocultar Filtros</a>
                 </div>
+                <!-- TYPE FILTER -->
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Tipo</h3>
                     <div class="w-full">
@@ -101,6 +113,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- CATEGORIES FILTER -->
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Categorias</h3>
                     <div class="w-full">
@@ -115,6 +128,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- SINCE FILTER -->
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Desde</h3>
                     <div class="w-full">
@@ -124,6 +138,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- SORT BY FILTER -->
                 <div class="w-full flex flex-col justify-evenly items-start">
                     <h3 class="text-lg font-bold">Ordenar por</h3>
                     <div class="w-full">
@@ -142,7 +157,9 @@
                 </div>
             </article>
         </section>
+        <!-- OPERATIONS SECTION -->
         <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl">
+            <!-- OPERATIONS TITLE AND NEW OP BUTTON -->
             <div class="w-full flex flex-row justify-between">
                 <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
                 <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
@@ -151,7 +168,7 @@
                     </span>
                 </button>
             </div>
-            <!-- SIN OPERACIONES -->
+            <!-- NO OPERATIONS -->
             <section id="sin-operaciones" class="hidden">
                 <figure class="p-16">
                     <img src="./img/undraw_savings_re_eq4w.svg" alt="">
@@ -159,9 +176,10 @@
                 <h4 class="text-2xl font-bold">Sin resultados</h4>
                 <h3 class="text-lg">Probá agregando operaciones o cambiando los filtros</h3>
             </section>
-            <!-- CON OPERACIONES -->
+            <!-- WITH OPERATIONS -->
             <section class="flex flex-col w-full">
-                <section class="hidden w-full flex flex-row justify-between md:inline-flex" id="tabla-operaciones">
+                <!-- DETAILS TABLE HEAD -->
+                <section class="hidden w-full flex flex-row justify-between md:inline-flex">
                     <div class="w-3/4">
                         <table class="self-start w-3/4 text-xl">
                             <th>Descripcion</th>
@@ -175,80 +193,91 @@
                             <th>Acciones</th>
                         </table>
                     </div>
-                </section>    
+                </section>
+                <!-- LISTED OPERATIONS -->
                 <section class="pt-10 pl-3" id="balance-operaciones">
-                        <div class="w-full flex flex-row justify-between">
-                            <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                                <h6 class="text-md font-bold mr-5">Super</h6>
-                                <li class="list-none">
-                                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                        placeholder</span>
-                                </li>
-                            </div>
-                            <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                                <h6 class="text-md">21/12/2023</h6>
-                                <h6 class="text-md text-red-500" id="monto-gasto">- 60000</h6>
-                                <div class="mb-2">
-                                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                        id="edit-operation">
-                                        Editar
-                                    </a>
-                                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                        id="delete-operation">
-                                        Eliminar
-                                    </a>
-                                </div>
+                    <!-- HARDCODED OP -->
+                    <div class="w-full flex flex-row justify-between">
+                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
+                            <h6 class="text-md font-bold mr-5">Super</h6>
+                            <li class="list-none">
+                                <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                                    placeholder</span>
+                            </li>
+                        </div>
+                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
+                            <h6 class="text-md">21/12/2023</h6>
+                            <h6 class="text-md text-red-500" id="monto-gasto">- 60000</h6>
+                            <!-- OPERATION ACTIONS -->
+                            <div class="mb-2">
+                                <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                    id="edit-operation">
+                                    Editar
+                                </a>
+                                <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                    id="delete-operation">
+                                    Eliminar
+                                </a>
                             </div>
                         </div>
-                        <div class="w-full flex justify-between">
-                            <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                                <h6 class="text-md font-bold mr-5">Sueldo</h6>
-                                <li class="list-none">
-                                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                        placeholder</span>
-                                </li>
-                            </div>
-                            <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                                <h6 class="text-md">1/12/2023</h6>
-                                <h6 class="text-md text-green-500" id="monto-ganancia">+ 200000</h6>
-                                <div class="mb-2">
-                                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                        id="edit-operation">
-                                        Editar
-                                    </a>
-                                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                        id="delete-operation">
-                                        Eliminar
-                                    </a>
-                                </div>
+                    </div>
+                    <!-- HARDCODED OP -->
+                    <div class="w-full flex justify-between">
+                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
+                            <h6 class="text-md font-bold mr-5">Sueldo</h6>
+                            <li class="list-none">
+                                <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
+                                    placeholder</span>
+                            </li>
+                        </div>
+                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
+                            <h6 class="text-md">1/12/2023</h6>
+                            <h6 class="text-md text-green-500" id="monto-ganancia">+ 200000</h6>
+                            <!-- OPERATION ACTIONS -->
+                            <div class="mb-2">
+                                <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                    id="edit-operation">
+                                    Editar
+                                </a>
+                                <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                                    id="delete-operation">
+                                    Eliminar
+                                </a>
                             </div>
                         </div>
+                    </div>
                 </section>
             </section>
         </section>
     </main>
-    <!--------------------------------------------CATEGORÍAS-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden">
+    <!--------------------------------------------CATEGORIES-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="categories">
+        <!-- CATEGORY SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
             <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
             <label for="category-name" class="font-semibold">Nombre</label>
+            <!-- ADD CATEGORY FORM -->
             <div class="flex mt-1 mb-4">
+                <!-- ADD CATEGOY INPUT -->
                 <div class="flex-grow">
                     <input type="text" name="category-name"
                         class="w-full border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none"
                         id="add-category-input">
                 </div>
+                <!-- ADD CATEGORY BUTTON -->
                 <div>
                     <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
                         <span id="add-category-button">Agregar</span>
                     </button>
                 </div>
             </div>
+            <!-- HARDCODED CATEGORY -->
             <div class="flex justify-between mt-10 hidden">
                 <li class="list-none">
                     <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
                         placeholder</span>
                 </li>
+                <!-- CATEGORY ACTIONS -->
                 <div class="mb-2">
                     <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
                         id="edit-category">
@@ -262,12 +291,12 @@
             </div>
         </section>
     </main>
-    <!--------------------------------------------REPORTES-------------------------------------------->
-    <main class="mx-auto my-12 hidden">
+    <!--------------------------------------------REPORTS-------------------------------------------->
+    <main class="mx-auto my-12 hidden" id="reports">
+        <!-- NO REPORTS -->
         <section class="max-w-2xl mx-auto rounded-lg mt-auto min-h-screen">
             <div class="flex flex-col items-center shadow-xl">
                 <h2 class="text-4xl font-semibold">Reportes</h2>
-                <!-- SIN REPORTES -->
                 <div>
                     <figure class="place-content-center p-16">
                         <img src="img/undraw_charts_re_5qe9.svg" alt="" class="w-full h-auto">
@@ -280,14 +309,14 @@
                 </div>
             </div>
         </section>
-
-        <!-- CON REPORTES -->
+        <!-- WITH REPORTS (HARDCODED)-->
         <section class="mx-auto max-w-6xl rounded-lg p-8 lg:p-12 xl:p-16 hidden">
             <h2 class="mb-4 font-black text-4xl lg:text-5xl">Reportes</h2>
             <div class="mx-auto mt-8 lg:mt-12 xl:mt-16 p-4 lg:p-8 xl:p-12 shadow-xl">
+                <!-- DETAILS -->
                 <section class="space-y-4">
                     <h4 class="text-lg font-semibold">Resumen</h4>
-                    <!-- CATEGORÍA MAYOR GANANCIA -->
+                    <!-- GREATER PROFIT CATEGORY -->
                     <div class="flex items-center p-1">
                         <div class="font-semibold w-1/4">Categoría con mayor ganancia</div>
                         <div class="flex-1 text-right">
@@ -305,7 +334,7 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORÍA MAYOR GASTO -->
+                    <!-- GREATER EXPENSE CATEGORY -->
                     <div class="flex items-center p-1">
                         <div class="font-semibold w-1/4">Categoría con mayor gasto</div>
                         <div class="flex-1 text-right">
@@ -325,7 +354,7 @@
                         </div>
                     </div>
 
-                    <!-- CATEGORÍA MAYOR BALANCE -->
+                    <!-- GREATER BALANCE CATEGORY -->
                     <div class="flex items-center p-1">
                         <div class="font-semibold w-1/4">Categoría con mayor balance</div>
                         <div class="flex-1 text-right">
@@ -344,7 +373,7 @@
                         </div>
                     </div>
 
-                    <!-- MES CON MAYOR GANANCIA -->
+                    <!-- GREATER PROFIT MONTH CATEGORY -->
                     <div class="flex items-center p-1">
                         <div class="font-semibold w-1/4">Mes con mayor ganancia</div>
                         <div class="flex-1 text-right">
@@ -362,7 +391,7 @@
                         </div>
                     </div>
 
-                    <!-- MES CON MAYOR GASTO -->
+                    <!-- GREATER EXPENSE MONTH CATEGORY -->
                     <div class="flex items-center p-1">
                         <div class="font-semibold w-1/4">Mes con mayor gasto</div>
                         <div class="flex-1 text-right">
@@ -380,10 +409,11 @@
                     </div>
                 </section>
 
-                <!-- TOTALES POR CATEGORÍA -->
+                <!-- TOTAL BY CATEGORY -->
                 <section class="space-y-4">
                     <h4 class="text-lg font-semibold mt-12 pb-2">Totales por categoría</h4>
                     <div class="flex items-center">
+                        <!-- CATEGORY SECTION -->
                         <div class="w-1/4">
                             <h4 class="font-semibold pb-2">Categoría</h4>
                             <div class="flex items-center pt-2">
@@ -394,7 +424,9 @@
                                 </span>
                             </div>
                         </div>
+                        <!-- DETAILED RESUME SECTION -->
                         <div class="w-3/4 flex space-x-4">
+                            <!-- PROFIT -->
                             <div class="flex-1">
                                 <h4 class="pb-2 font-semibold text-right">Ganancias</h4>
                                 <div class="flex items-center justify-end p-2 text-green-600"
@@ -402,6 +434,7 @@
                                     +$8000
                                 </div>
                             </div>
+                            <!-- EXPENSES -->
                             <div class="flex-1">
                                 <h4 class="font-semibold text-right pb-2">Gastos</h4>
                                 <div class="flex items-center justify-end pt-2 text-red-600"
@@ -409,6 +442,7 @@
                                     -$0
                                 </div>
                             </div>
+                            <!-- BALANCE -->
                             <div class="flex-1">
                                 <h4 class="font-semibold text-right pb-2">Balance</h4>
                                 <div class="flex items-center justify-end pt-2" id="totales-categoria-balance">
@@ -419,17 +453,20 @@
                     </div>
                 </section>
 
-                <!-- TOTALES POR MES -->
+                <!-- TOTAL BY MONTH -->
                 <section class="space-y-4">
                     <h3 class="text-lg font-semibold mt-12">Totales por mes</h3>
                     <div class="flex items-center">
+                        <!-- MONTH SECTION -->
                         <div class="w-1/4">
                             <h4 class="font-semibold">Mes</h4>
                             <div class="flex items-center pt-2 font-semibold" id="totales-mes">
                                 12/03
                             </div>
                         </div>
+                        <!-- DETAILED RESUME SECTION -->
                         <div class="w-3/4 flex space-x-4">
+                            <!-- PROFIT -->
                             <div class="flex-1 text-right">
                                 <h4 class="font-semibold">Ganancias</h4>
                                 <div class="flex items-center justify-end pt-2 text-green-600"
@@ -437,12 +474,14 @@
                                     +$60000
                                 </div>
                             </div>
+                            <!-- EXPENSES -->
                             <div class="flex-1 text-right">
                                 <h4 class="font-semibold">Gastos</h4>
                                 <div class="flex items-center justify-end pt-2 text-red-600" id="totales-mes-gastos">
                                     -$10000
                                 </div>
                             </div>
+                            <!-- BALANCE -->
                             <div class="flex-1 text-right">
                                 <h4 class="font-semibold">Balance</h4>
                                 <div class="flex items-center justify-end pt-2" id="totales-mes-balance">
@@ -460,10 +499,12 @@
             </div>
         </section>
     </main>
-    <!--------------------------------------------NUEVA OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden">
+    <!--------------------------------------------NEW OP-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="new-op">
+        <!-- NEW OPERATION SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
+            <!-- NEW OP FORM -->
             <div>
                 <h3 class="text-lg font-bold">Descripción</h3>
                 <div class="w-full">
@@ -505,6 +546,7 @@
                     </div>
                 </div>
             </div>
+            <!-- NEW OP ACTIONS -->
             <div class="flex self-end">
                 <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
                     <span id="cancel-newoperation-button">Cancelar</span>
@@ -515,10 +557,12 @@
             </div>
         </section>
     </main>
-    <!--------------------------------------------EDITAR OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="editar-op">
+    <!--------------------------------------------EDIT OP-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="edit-op">
+        <!-- EDIT OP SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
+            <!-- EDIT OP FORM -->
             <div>
                 <h3 class="text-lg font-bold">Descripción</h3>
                 <div class="w-full">
@@ -560,6 +604,7 @@
                     </div>
                 </div>
             </div>
+            <!-- EDIT OP ACTIONS -->
             <div class="flex self-end">
                 <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
                     <span id="cancel-editoperation-button">Cancelar</span>
