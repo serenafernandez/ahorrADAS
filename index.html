@@ -46,7 +46,7 @@
                 <!-- BALANCE -->
                 <button
                     class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+                    <a class="flex items-center justify-evenly" id="balance-nav">
                         <span class="material-icons">
                             account_balance_wallet
                         </span>
@@ -55,7 +55,7 @@
                 <!-- CATEGORIAS -->
                 <button
                     class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+                    <a class="flex items-center justify-evenly" id="categories-nav">
                         <span class="material-icons">
                             layers
                         </span>
@@ -64,7 +64,7 @@
                 <!-- REPORTES -->
                 <button
                     class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+                    <a class="flex items-center justify-evenly" id="reports-nav">
                         <span class="material-icons">
                             menu_book
                         </span>
@@ -74,7 +74,7 @@
         </div>
     </header>
     <!--------------------------------------------BALANCE-------------------------------------------->
-    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row">
+    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row" id="balance-section">
         <section class="w-1/4 mx-auto flex flex-col md:mx-0">
             <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
                 <h2 class="mb-8 font-bold text-4xl">Balance</h2>
@@ -94,57 +94,60 @@
             <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
                 <div class="w-full flex flex-row justify-evenly items-center">
                     <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
-                    <a class="relative left-8 text-blue-500 text-center" href="#">Ocultar Filtros</a>
+                    <a class="relative left-8 text-blue-500 text-center" href="#" id="hide-show-filters">Ocultar
+                        Filtros</a>
                 </div>
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Tipo</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="Todos">Todos</option>
-                                <option value="Gasto">Gasto</option>
-                                <option value="Ganancia">Ganancia</option>
-                            </select>
+                <div id="filters-content">
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Tipo</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Gasto">Gasto</option>
+                                    <option value="Ganancia">Ganancia</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Categorias</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="Todas">Todas</option>
-                                <option value="Comida">Comida</option>
-                                <option value="Trabajo">Trabajo</option>
-                                <option value="Servicios">Servicios</option>
-                            </select>
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Categorias</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Comida">Comida</option>
+                                    <option value="Trabajo">Trabajo</option>
+                                    <option value="Servicios">Servicios</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Desde</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <input type="date"
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Desde</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <input type="date"
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Ordenar por</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="">Más reciente</option>
-                                <option value="">Menos reciente</option>
-                                <option value="">Mayor monto</option>
-                                <option value="">Menor monto</option>
-                                <option value="">A/Z</option>
-                                <option value="">Z/A</option>
-                            </select>
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Ordenar por</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="">Más reciente</option>
+                                    <option value="">Menos reciente</option>
+                                    <option value="">Mayor monto</option>
+                                    <option value="">Menor monto</option>
+                                    <option value="">A/Z</option>
+                                    <option value="">Z/A</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,14 +156,15 @@
         <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl">
             <div class="w-full flex flex-row justify-between">
                 <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
-                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
+                    id="new-operation-button">
                     <span id="add-operation-button">
                         + Nueva operación
                     </span>
                 </button>
             </div>
             <!-- SIN OPERACIONES -->
-            <section id="sin-operaciones" class="hidden">
+            <section id="sin-operaciones" class="">
                 <figure class="p-16">
                     <img src="./img/undraw_savings_re_eq4w.svg" alt="">
                 </figure>
@@ -168,7 +172,7 @@
                 <h3 class="text-lg">Probá agregando operaciones o cambiando los filtros</h3>
             </section>
             <!-- CON OPERACIONES -->
-            <section class="flex flex-col w-full">
+            <section class="flex flex-col w-full hidden">
                 <section class="hidden w-full flex flex-row justify-between md:inline-flex" id="tabla-operaciones">
                     <div class="w-3/4">
                         <table class="self-start w-3/4 text-xl">
@@ -242,7 +246,7 @@
         </section>
     </main>
     <!--------------------------------------------CATEGORÍAS-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden">
+    <main class="flex items-center min-h-screen hidden" id="categories-section">
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
             <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
             <label for="category-name" class="font-semibold">Nombre</label>
@@ -277,7 +281,7 @@
         </section>
     </main>
     <!--------------------------------------------REPORTES-------------------------------------------->
-    <main class="mx-auto my-12 hidden">
+    <main class="mx-auto my-12 hidden" id="reports-section">
         <section class="max-w-2xl mx-auto rounded-lg mt-auto min-h-screen">
             <div class="flex flex-col items-center shadow-xl">
                 <h2 class="text-4xl font-semibold">Reportes</h2>
@@ -475,7 +479,7 @@
         </section>
     </main>
     <!--------------------------------------------NUEVA OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden">
+    <main class="flex items-center min-h-screen" id="new-operation-section">
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
             <div>
@@ -520,7 +524,8 @@
                 </div>
             </div>
             <div class="flex self-end">
-                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2"
+                    id="cancel-operation-button">
                     <span id="cancel-newoperation-button">Cancelar</span>
                 </button>
                 <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
@@ -530,7 +535,7 @@
         </section>
     </main>
     <!--------------------------------------------EDITAR OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="editar-op">
+    <main class="flex items-center min-h-screen hidden" id="edit-operation-section">
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
             <div>
