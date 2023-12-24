@@ -248,17 +248,20 @@
                 <div class="w-full">
                     <div class="relative w-full min-w-[200px] h-10">
                         <input
-                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"
+                            id="edit-category-input" />
                     </div>
                 </div>
             </div>
             <!-- EDIT CATEGORY ACTIONS -->
             <div class="flex self-end mt-2">
-                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
-                    <span id="cancel-editcategory-button">Cancelar</span>
+                <button class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                    onclick="editCategory()" id="confirm-edit-button">
+                    Editar
                 </button>
-                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
-                    <span id="add-editcategory-button">Editar</span>
+                <button class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
+                    onclick="cancelEditCategory()" id="cancel-category-button">
+                    Cancelar
                 </button>
             </div>
         </section>
