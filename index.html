@@ -18,7 +18,9 @@
 
 <body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
     <!--------------------------------------------HEADER-------------------------------------------->
-    <header class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]" id="header">
+    <header
+        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]"
+        id="header">
         <!-- TITLE -->
         <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
             <span class="material-icons" style="font-size:250%;">
@@ -27,39 +29,45 @@
             <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
         <!-- CLOSE MENU BUTTON -->
-        <button class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+        <button
+            class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 close
             </span>
         </button>
         <!-- OPEN MENU BUTTON -->
-        <button class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
+        <button
+            class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
             <span class="material-icons">
                 menu
             </span>
         </button>
         <!-- NAVIGATION -->
         <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
-            <nav class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
-                <!-- BALANCE BUTTON-->
-                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+            <nav
+                class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
+                <!-- BALANCE -->
+                <button
+                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" id="balance-nav">
                         <span class="material-icons">
                             account_balance_wallet
                         </span>
                         Balance</a>
                 </button>
-                <!-- CATEGORIES BUTTON -->
-                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+                <!-- CATEGORIAS -->
+                <button
+                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" id="categories-nav">
                         <span class="material-icons">
                             layers
                         </span>
                         Categorias</a>
                 </button>
-                <!-- REPORTS BUTTON -->
-                <button class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly">
+                <!-- REPORTES -->
+                <button
+                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
+                    <a class="flex items-center justify-evenly" id="reports-nav">
                         <span class="material-icons">
                             menu_book
                         </span>
@@ -69,8 +77,7 @@
         </div>
     </header>
     <!--------------------------------------------BALANCE-------------------------------------------->
-    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row" id="balance">
-        <!-- BALANCE AND FILTERS SECTION -->
+    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row" id="balance-section">
         <section class="w-1/4 mx-auto flex flex-col md:mx-0">
             <!-- BALANCE RESUME -->
             <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
@@ -94,76 +101,78 @@
             </article>
             <!-- FILTERS -->
             <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
-                <!-- FILTERS TITLE AND TOGGLE -->
                 <div class="w-full flex flex-row justify-evenly items-center">
                     <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
-                    <a class="relative left-8 text-blue-500 text-center hidden" href="#">Mostrar Filtros</a>
-                    <a class="relative left-8 text-blue-500 text-center" href="#">Ocultar Filtros</a>
+                    <a class="relative left-8 text-blue-500 text-center" href="#" id="hide-show-filters">Ocultar
+                        Filtros</a>
                 </div>
                 <!-- TYPE FILTER -->
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Tipo</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="Todos">Todos</option>
-                                <option value="Gasto">Gasto</option>
-                                <option value="Ganancia">Ganancia</option>
-                            </select>
+                <div id="filters-content">
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Tipo</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Gasto">Gasto</option>
+                                    <option value="Ganancia">Ganancia</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- CATEGORIES FILTER -->
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Categorias</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="Todas">Todas</option>
-                                <option value="Comida">Comida</option>
-                                <option value="Trabajo">Trabajo</option>
-                                <option value="Servicios">Servicios</option>
-                            </select>
+                    <!-- CATEGORIES FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Categorias</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Comida">Comida</option>
+                                    <option value="Trabajo">Trabajo</option>
+                                    <option value="Servicios">Servicios</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- SINCE FILTER -->
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Desde</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <input type="date"
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    <!-- SINCE FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Desde</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <input type="date"
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- SORT BY FILTER -->
-                <div class="w-full flex flex-col justify-evenly items-start">
-                    <h3 class="text-lg font-bold">Ordenar por</h3>
-                    <div class="w-full">
-                        <div class="relative w-full min-w-[200px] h-10">
-                            <select
-                                class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
-                                <option value="">Más reciente</option>
-                                <option value="">Menos reciente</option>
-                                <option value="">Mayor monto</option>
-                                <option value="">Menor monto</option>
-                                <option value="">A/Z</option>
-                                <option value="">Z/A</option>
-                            </select>
+                    <!-- SORT BY FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Ordenar por</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="">Más reciente</option>
+                                    <option value="">Menos reciente</option>
+                                    <option value="">Mayor monto</option>
+                                    <option value="">Menor monto</option>
+                                    <option value="">A/Z</option>
+                                    <option value="">Z/A</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
             </article>
         </section>
         <!-- OPERATIONS SECTION -->
-        <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl">
+        <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl" id="">
             <!-- OPERATIONS TITLE AND NEW OP BUTTON -->
             <div class="w-full flex flex-row justify-between">
                 <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
-                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
+                    id="new-operation-button">
                     <span id="add-operation-button">
                         + Nueva operación
                     </span>
@@ -174,13 +183,13 @@
                 <figure class="p-16">
                     <img src="./img/undraw_savings_re_eq4w.svg" alt="">
                 </figure>
-                <h4 class="text-2xl font-bold">Sin resultados</h4>
-                <h3 class="text-lg">Probá agregando operaciones o cambiando los filtros</h3>
+                <h4 class="text-2xl font-bold text-center">Sin resultados</h4>
+                <h3 class="text-lg text-center">Probá agregando operaciones o cambiando los filtros</h3>
             </section>
             <!-- WITH OPERATIONS -->
             <section class="flex flex-col w-full">
                 <!-- DETAILS TABLE HEAD -->
-                <section class="hidden w-full flex flex-row justify-between md:inline-flex">
+                <section class="w-full flex flex-row justify-between md:inline-flex">
                     <div class="w-3/4">
                         <table class="self-start w-3/4 text-xl">
                             <th>Descripcion</th>
@@ -197,69 +206,19 @@
                 </section>
                 <!-- LISTED OPERATIONS -->
                 <section class="pt-10 pl-3" id="balance-operaciones">
-                    <!-- HARDCODED OP -->
-                    <div class="w-full flex flex-row justify-between">
-                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                            <h6 class="text-md font-bold mr-5">Super</h6>
-                            <li class="list-none">
-                                <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                    placeholder</span>
-                            </li>
-                        </div>
-                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                            <h6 class="text-md">21/12/2023</h6>
-                            <h6 class="text-md text-red-500" id="monto-gasto">- 60000</h6>
-                            <!-- OPERATION ACTIONS -->
-                            <div class="mb-2">
-                                <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="edit-operation">
-                                    Editar
-                                </a>
-                                <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="delete-operation">
-                                    Eliminar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- HARDCODED OP -->
-                    <div class="w-full flex justify-between">
-                        <div class="w-2/4 flex flex-col justify-evenly mr-20 md:flex-row">
-                            <h6 class="text-md font-bold mr-5">Sueldo</h6>
-                            <li class="list-none">
-                                <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                                    placeholder</span>
-                            </li>
-                        </div>
-                        <div class="w-3/4 flex flex-col justify-evenly md:flex-row">
-                            <h6 class="text-md">1/12/2023</h6>
-                            <h6 class="text-md text-green-500" id="monto-ganancia">+ 200000</h6>
-                            <!-- OPERATION ACTIONS -->
-                            <div class="mb-2">
-                                <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="edit-operation">
-                                    Editar
-                                </a>
-                                <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                                    id="delete-operation">
-                                    Eliminar
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </section>
             </section>
         </section>
     </main>
     <!--------------------------------------------CATEGORIES-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="categories">
+    <main class="flex items-center min-h-screen hidden" id="categories-section">
         <!-- CATEGORY SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
             <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
             <label for="category-name" class="font-semibold">Nombre</label>
             <!-- ADD CATEGORY FORM -->
             <div class="flex mt-1 mb-4">
-                <!-- ADD CATEGOY INPUT -->
+                <!-- ADD CATEGORY INPUT -->
                 <div class="flex-grow">
                     <input type="text" name="category-name"
                         class="w-full border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none"
@@ -272,28 +231,43 @@
                     </button>
                 </div>
             </div>
-            <!-- HARDCODED CATEGORY -->
-            <div class="flex justify-between mt-10 hidden">
-                <li class="list-none">
-                    <span class="category-tag text-xs text-orange-400 bg-orange-100 rounded-md px-2 py-1">Category
-                        placeholder</span>
-                </li>
-                <!-- CATEGORY ACTIONS -->
-                <div class="mb-2">
-                    <a href="#" class="mr-2 text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                        id="edit-category">
-                        Editar
-                    </a>
-                    <a href="#" class="text-xs text-blue-500 bg-rose-200 hover:text-black rounded-md px-2 py-1"
-                        id="delete-category">
-                        Eliminar
-                    </a>
+            <!-- CATEGORY LIST -->
+            <div class="flex justify-between mt-10">
+                <div id="category-list"></div>
+            </div>
+        </section>
+    </main>
+    <!--------------------------------------------EDIT CATEGORY-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="edit-category-section">
+        <!-- EDIT CATEGORY SECTION -->
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Editar categoría</h2>
+            <!-- EDIT CATEGORY FORM -->
+            <div>
+                <h3 class="text-lg font-bold">Nombre</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"
+                            id="edit-category-input" />
+                    </div>
                 </div>
+            </div>
+            <!-- EDIT CATEGORY ACTIONS -->
+            <div class="flex self-end mt-2">
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
+                    onclick="editCategory()" id="confirm-edit-button">
+                    Editar
+                </button>
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2"
+                    onclick="cancelEditCategory()" id="cancel-category-button">
+                    Cancelar
+                </button>
             </div>
         </section>
     </main>
     <!--------------------------------------------REPORTS-------------------------------------------->
-    <main class="mx-auto my-12 hidden" id="reports">
+    <main class="mx-auto my-12 hidden" id="reports-section">
         <!-- NO REPORTS -->
         <section class="max-w-2xl mx-auto rounded-lg mt-auto min-h-screen">
             <div class="flex flex-col items-center shadow-xl">
@@ -501,7 +475,7 @@
         </section>
     </main>
     <!--------------------------------------------NEW OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="new-op">
+    <main class="flex items-center min-h-screen hidden" id="new-operation-section">
         <!-- NEW OPERATION SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
@@ -549,7 +523,8 @@
             </div>
             <!-- NEW OP ACTIONS -->
             <div class="flex self-end">
-                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2"
+                    id="cancel-operation-button">
                     <span id="cancel-newoperation-button">Cancelar</span>
                 </button>
                 <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
@@ -559,7 +534,7 @@
         </section>
     </main>
     <!--------------------------------------------EDIT OP-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="edit-op">
+    <main class="flex items-center min-h-screen hidden" id="edit-operation-section">
         <!-- EDIT OP SECTION -->
         <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
             <h2 class="mb-8 font-bold text-4xl">Editar operación</h2>
@@ -607,32 +582,6 @@
             </div>
             <!-- EDIT OP ACTIONS -->
             <div class="flex self-end">
-                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
-                    <span id="cancel-editoperation-button">Cancelar</span>
-                </button>
-                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
-                    <span id="add-editoperation-button">Editar</span>
-                </button>
-            </div>
-        </section>
-    </main>
-    <!--------------------------------------------EDIT CATEGORY-------------------------------------------->
-    <main class="flex items-center min-h-screen hidden" id="edit-category">
-        <!-- EDIT CATEGORY SECTION -->
-        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
-            <h2 class="mb-8 font-bold text-4xl">Editar categoría</h2>
-            <!-- EDIT CATEGORY FORM -->
-            <div>
-                <h3 class="text-lg font-bold">Nombre</h3>
-                <div class="w-full">
-                    <div class="relative w-full min-w-[200px] h-10">
-                        <input
-                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
-                    </div>
-                </div>
-            </div>
-            <!-- EDIT CATEGORY ACTIONS -->
-            <div class="flex self-end mt-2">
                 <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
                     <span id="cancel-editoperation-button">Cancelar</span>
                 </button>
