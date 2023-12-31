@@ -24,6 +24,7 @@ const setInfo = (key, info) => localStorage.setItem(key, JSON.stringify(info));
 const getInfo = (key) => JSON.parse(localStorage.getItem(key));
 
 let loadedCategoriesFromLocalStorage = getInfo("categories") || [];
+let loadedOperationsFromLocalStorage = getInfo("operations") || []
 
 // seteo las categorías default que quiero que se muestren automáticamente la primera vez que abro mi app
 const defaultCategories = [
@@ -147,9 +148,11 @@ const initialize = () => {
     showElement(["#new-operation-section"]);
     hideElement(["#balance-section"]);
   });
-
+  
+  // modifiqué esta funcion porque tenía un error al llamar a los id 
+  //(borrar comentario)
   $("#cancel-newoperation-button").addEventListener("click", () => {
-    hideElement(["#edit-operation-section"]);
+    hideElement(["#new-operation-section"]);
     showElement(["#balance-section"]);
   });
 
@@ -166,6 +169,37 @@ const initialize = () => {
   $("#cancel-category-button").addEventListener("click", () => {
     cancelEditCategory();
   });
+
+  // ABRIR DROPDOWN EN MOBILE
+  $(".bars").addEventListener("click", () => {
+    showElement([".xmark", "#menu-dropdown"])
+    hideElement([".bars"])
+  })
+
+  // CERRAR DROPDOWN EN MOBILE
+  $(".xmark").addEventListener("click", () => {
+    showElement([".bars"])
+    hideElement([".xmark", "#menu-dropdown"])
+  })
+
+  // OCULTAR FILTROS
+  $("#hide-filters").addEventListener("click", () => {
+    showElement(["#show-filters"])
+    hideElement(["#hide-filters", "#filters-content"])
+  })
+  // MOSTRAR FILTROS
+  $("#show-filters").addEventListener("click", () => {
+    showElement(["#hide-filters", "#filters-content"])
+    hideElement(["#show-filters"])
+  })
+
 };
+
+
+
+
+
+
+
 
 window.addEventListener("load", initialize);

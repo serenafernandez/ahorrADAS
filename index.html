@@ -28,82 +28,73 @@
             </span>
             <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
         </section>
-        <!-- CLOSE MENU BUTTON -->
-        <button
-            class="hidden absolute p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
-            <span class="material-icons">
-                close
-            </span>
-        </button>
-        <!-- OPEN MENU BUTTON -->
-        <button
-            class="sm:hidden absolute right-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]">
-            <span class="material-icons">
-                menu
-            </span>
-        </button>
-        <!-- NAVIGATION -->
-        <div class="relative right-60 top-32 sm:flex sm:static sm:w-4/6 md:3/5">
-            <nav
-                class="h-40 basis-full w-screen  bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:w-3/5 md:text-xl">
+        <!-- MENU DROPDOWN BUTTONS -->
+        <nav class="w-fit">
+            <button
+                class="sm:hidden absolute right-5 top-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]" id="menu-button">
+                <span class="material-icons bars">
+                    menu
+                </span>
+                <span class="material-icons xmark hidden">
+                    close
+                </span>
+            </button>
+            <!-- NAVIGATION -->
+            <div
+                class="hidden w-screen sm:w-fit space-y-1 sm:space-x-3 shadow-lg lg:flex lg:items-center relative right-60 top-32 sm:flex sm:static md:3/5 h-40 basis-full bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:text-xl" id="menu-dropdown">
                 <!-- BALANCE -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" id="balance-nav">
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly" id="balance-nav">
                         <span class="material-icons">
                             account_balance_wallet
                         </span>
                         Balance</a>
-                </button>
                 <!-- CATEGORIAS -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" id="categories-nav">
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly" id="categories-nav">
                         <span class="material-icons">
                             layers
                         </span>
                         Categorias</a>
-                </button>
                 <!-- REPORTES -->
-                <button
-                    class="p-2 sm:w-1/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 sm:px-5 hover:shadow-md hover:shadow-[#FFF7AD]">
-                    <a class="flex items-center justify-evenly" id="reports-nav">
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly" id="reports-nav">
                         <span class="material-icons">
                             menu_book
                         </span>
                         Reportes</a>
-                </button>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <!--------------------------------------------BALANCE-------------------------------------------->
-    <main class="w-full flex flex-col-reverse items-start justify-evenly min-h-screen md:flex-row" id="balance-section">
-        <section class="w-1/4 mx-auto flex flex-col md:mx-0">
+    <main class="w-screen flex flex-col-reverse items-start justify-evenly min-h-screen sm:flex-row" id="balance-section">
+        <section class="xl:min-h-75% p-8 w-full sm:w-full sm:w-2/4 lg:w-1/4 mx-auto flex flex-col justify-between md:mx-0">
             <!-- BALANCE RESUME -->
-            <article class="flex flex-col mx-auto justify-evenly md:w-4/5 p-8 shadow-xl">
+            <article class="w-full sm:h-fit sm:w-fit flex flex-col items-start mx-auto justify-evenly xl:w-full py-5 p-3 shadow-md md:shadow-xl">
                 <!-- BALANCE RESUME TITLE -->
-                <h2 class="mb-8 font-bold text-4xl">Balance</h2>
+                <div class="md:p-5 w-full flex flex-row justify-start">
+                    <h2 class="mb-8 font-bold text-4xl">Balance</h2>
+                </div>
                 <!-- EARNINGS -->
-                <div class="flex flex-row justify-between items-start">
-                    <h3 class="text-xl font-bold">Ganacias</h3>
+                <div class="w-full flex justify-between items-center">
+                    <h3 class="text-lg lg:text-xl font-bold">Ganacias</h3>
                     <p class="text-xl text-green-300">+$0</p>
                 </div>
                 <!-- EXPENSES -->
-                <div class="flex flex-row justify-between items-start">
-                    <h3 class="text-xl font-bold">Gastos</h3>
+                <div class="w-full flex justify-between items-center">
+                    <h3 class="text-lg lg:text-xl font-bold">Gastos</h3>
                     <p class="text-xl text-red-300">-$0</p>
                 </div>
                 <!-- TOTAL -->
-                <div class="flex flex-row justify-between items-start">
+                <div class="w-full flex justify-between items-center">
                     <h3 class="text-2xl font-bold">Total</h3>
                     <p class="text-xl font-bold">+$0</p>
                 </div>
             </article>
             <!-- FILTERS -->
-            <article class="flex flex-col justify-evenly items-start mx-auto md:w-4/5 p-8 shadow-xl">
-                <div class="w-full flex flex-row justify-evenly items-center">
+            <article class="w-full md:h-fit md:w-fit flex flex-col items-start xl:items-center justify-evenly xl:w-full py-5 p-3 shadow-md md:shadow-xl">
+                <div class="md:p-5 w-full flex flex-row justify-evenly">
                     <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
-                    <a class="relative left-8 text-blue-500 text-center" href="#" id="hide-show-filters">Ocultar
+                    <a class="text-blue-500 text-center" href="#" id="hide-filters">Ocultar
+                        Filtros</a>
+                    <a class="hidden relative left-2 text-blue-500 text-center" href="#" id="show-filters">Mostrar
                         Filtros</a>
                 </div>
                 <!-- TYPE FILTER -->
@@ -167,9 +158,9 @@
             </article>
         </section>
         <!-- OPERATIONS SECTION -->
-        <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-xl" id="">
+        <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-md md:shadow-xl" id="">
             <!-- OPERATIONS TITLE AND NEW OP BUTTON -->
-            <div class="w-full flex flex-row justify-between">
+            <div class="md:p-5 w-full flex flex-row justify-between">
                 <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
                 <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
                     id="new-operation-button">
@@ -187,26 +178,32 @@
                 <h3 class="text-lg text-center">Probá agregando operaciones o cambiando los filtros</h3>
             </section>
             <!-- WITH OPERATIONS -->
-            <section class="flex flex-col w-full">
-                <!-- DETAILS TABLE HEAD -->
-                <section class="w-full flex flex-row justify-between md:inline-flex">
-                    <div class="w-3/4">
-                        <table class="self-start w-3/4 text-xl">
-                            <th>Descripcion</th>
-                            <th>Categoría</th>
-                        </table>
-                    </div>
-                    <div class="w-3/4">
-                        <table class="self-end w-full text-xl">
-                            <th>Fecha</th>
-                            <th>Monto</th>
-                            <th>Acciones</th>
-                        </table>
-                    </div>
-                </section>
-                <!-- LISTED OPERATIONS -->
-                <section class="pt-10 pl-3" id="balance-operaciones">
-                </section>
+            <section class="mt-4">
+                <!-- DETAILS TABLE  -->
+                <table id="table" class="w-full table-fixed flex-wrap">
+                    <thead class="head-table hidden md:block">
+                        <tr class="md:flex md:justify-between">
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Descripción
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Categoría
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Fecha
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Monto
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="operations-table">
+                        <!-- OP RENDER -->
+                    </tbody>
+                </table>
             </section>
         </section>
     </main>
