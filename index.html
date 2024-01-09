@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhorrADAs</title>
+    <link rel="icon" type="image/x-icon" href="./img/logo.ico">
+    <!-- google fonts' embed link-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <!-- tailwind's CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google icon's embed link-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="w-full h-screen bg-gradient-to-r from-[#FFF7AD] to-[#FFA9F9] font-['Roboto']">
+    <!--------------------------------------------HEADER-------------------------------------------->
+    <header
+        class="h-24 w-full p-5 bg-[#DF72BF] shadow-lg shadow-inner flex flex-row justify-between items-center text-[#FFF7AD]"
+        id="header">
+        <!-- TITLE -->
+        <section class="basis-0 sm:w-1/4 flex items-center drop-shadow-md font-extrabold justify-between md:1/2">
+            <span class="material-icons" style="font-size:250%;">
+                calculate
+            </span>
+            <h1 class="text-4xl md:text-5xl">AhorrADAs</h1>
+        </section>
+        <!-- MENU DROPDOWN BUTTONS -->
+        <nav class="w-fit">
+            <button
+                class="sm:hidden absolute right-5 top-5 p-2 border rounded-xl border-solid border-fuchsia-400 font-bold hover:shadow-md hover:shadow-[#FFF7AD]"
+                id="menu-button">
+                <span class="material-icons bars">
+                    menu
+                </span>
+                <span class="material-icons xmark hidden">
+                    close
+                </span>
+            </button>
+            <!-- NAVIGATION -->
+            <div class="hidden w-screen sm:w-fit space-y-1 sm:space-x-3 shadow-lg lg:flex lg:items-center relative right-60 top-32 sm:flex sm:static md:3/5 h-40 basis-full bg-pink-300 flex flex-col justify-center items-center shadow-xl sm:static sm:flex sm:flex-row sm:bg-inherit sm:shadow-inherit sm:items-center sm:justify-evenly sm:text-md md:text-xl"
+                id="menu-dropdown">
+                <!-- BALANCE -->
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly"
+                    id="balance-nav">
+                    <span class="material-icons">
+                        account_balance_wallet
+                    </span>
+                    Balance</a>
+                <!-- CATEGORIAS -->
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly"
+                    id="categories-nav">
+                    <span class="material-icons">
+                        layers
+                    </span>
+                    Categorias</a>
+                <!-- REPORTES -->
+                <a class="p-2 lg:py-3 lg:px-8 sm:w-2/4 border-b border-pink-500 sm:border sm:rounded-xl sm:border-solid sm:border-fuchsia-400 font-bold sm:py-2 hover:shadow-md hover:shadow-[#FFF7AD] flex items-center justify-evenly"
+                    id="reports-nav">
+                    <span class="material-icons">
+                        menu_book
+                    </span>
+                    Reportes</a>
+            </div>
+        </nav>
+    </header>
+    <!--------------------------------------------BALANCE-------------------------------------------->
+    <main class="w-screen flex flex-col-reverse items-start justify-evenly min-h-screen sm:flex-row"
+        id="balance-section">
+        <section
+            class="xl:min-h-75% p-8 w-full sm:w-full sm:w-2/4 lg:w-1/4 mx-auto flex flex-col justify-between md:mx-0">
+            <!-- BALANCE RESUME -->
+            <article
+                class="w-full sm:h-fit sm:w-fit flex flex-col items-start mx-auto justify-evenly xl:w-full py-5 p-3 shadow-md md:shadow-xl">
+                <!-- BALANCE RESUME TITLE -->
+                <div class="md:p-5 w-full flex flex-row justify-start">
+                    <h2 class="mb-8 font-bold text-4xl">Balance</h2>
+                </div>
+                <!-- EARNINGS -->
+                <div class="w-full flex justify-between items-center">
+                    <h3 class="text-lg lg:text-xl font-bold">Ganancias</h3>
+                    <p class="text-xl text-green-300">+$0</p>
+                </div>
+                <!-- EXPENSES -->
+                <div class="w-full flex justify-between items-center">
+                    <h3 class="text-lg lg:text-xl font-bold">Gastos</h3>
+                    <p class="text-xl text-red-300">-$0</p>
+                </div>
+                <!-- TOTAL -->
+                <div class="w-full flex justify-between items-center">
+                    <h3 class="text-2xl font-bold">Total</h3>
+                    <p class="text-xl font-bold">+$0</p>
+                </div>
+            </article>
+            <!-- FILTERS -->
+            <article
+                class="w-full md:h-fit md:w-fit flex flex-col items-start xl:items-center justify-evenly xl:w-full py-5 p-3 shadow-md md:shadow-xl">
+                <div class="md:p-5 w-full flex flex-row justify-evenly">
+                    <h2 class="mb-8 font-bold text-4xl">Filtros</h2>
+                    <a class="text-blue-500 text-center" href="#" id="hide-filters">Ocultar
+                        Filtros</a>
+                    <a class="hidden relative left-2 text-blue-500 text-center" href="#" id="show-filters">Mostrar
+                        Filtros</a>
+                </div>
+                <!-- TYPE FILTER -->
+                <div id="filters-content">
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Tipo</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todos">Todos</option>
+                                    <option value="Gasto">Gasto</option>
+                                    <option value="Ganancia">Ganancia</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CATEGORIES FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Categorias</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="Todas">Todas</option>
+                                    <option value="Comida">Comida</option>
+                                    <option value="Trabajo">Trabajo</option>
+                                    <option value="Servicios">Servicios</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SINCE FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Desde</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <input type="date"
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SORT BY FILTER -->
+                    <div class="w-full flex flex-col justify-evenly items-start">
+                        <h3 class="text-lg font-bold">Ordenar por</h3>
+                        <div class="w-full">
+                            <div class="relative w-full min-w-[200px] h-10">
+                                <select
+                                    class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                                    <option value="">Más reciente</option>
+                                    <option value="">Menos reciente</option>
+                                    <option value="">Mayor monto</option>
+                                    <option value="">Menor monto</option>
+                                    <option value="">A/Z</option>
+                                    <option value="">Z/A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- OPERATIONS SECTION -->
+        <section class=" flex flex-col justify-evenly items-center md:w-4/5 lg:w-2/3 p-8 shadow-md md:shadow-xl" id="">
+            <!-- OPERATIONS TITLE AND NEW OP BUTTON -->
+            <div class="md:p-5 w-full flex flex-row justify-between">
+                <h2 class="mb-8 font-bold text-4xl">Operaciones</h2>
+                <button class="button h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
+                    id="new-operation-button">
+                    <span id="add-operation-button">
+                        + Nueva operación
+                    </span>
+                </button>
+            </div>
+            <!-- NO OPERATIONS -->
+            <section id="sin-operaciones" class="hidden">
+                <figure class="p-16">
+                    <img src="./img/undraw_savings_re_eq4w.svg" alt="">
+                </figure>
+                <h4 class="text-2xl font-bold text-center">Sin resultados</h4>
+                <h3 class="text-lg text-center">Probá agregando operaciones o cambiando los filtros</h3>
+            </section>
+            <!-- WITH OPERATIONS -->
+            <section class="mt-4">
+                <!-- DETAILS TABLE  -->
+                <table id="table" class="w-full table-fixed flex-wrap">
+                    <thead class="head-table hidden md:block">
+                        <tr class="md:flex md:justify-between">
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Descripción
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Categoría
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Fecha
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Monto
+                            </th>
+                            <th class="px-4 py-2 md:w-1/5 md:flex md:justify-start">
+                                Acciones
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="operations-table">
+                        <!-- OP RENDER -->
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </main>
+    <!--------------------------------------------CATEGORIES-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="categories-section">
+        <!-- CATEGORY SECTION -->
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl">
+            <h2 class="mb-8 font-bold text-4xl">Categorías</h2>
+            <label for="category-name" class="font-semibold">Nombre</label>
+            <!-- ADD CATEGORY FORM -->
+            <div class="flex mt-1 mb-4">
+                <!-- ADD CATEGORY INPUT -->
+                <div class="flex-grow">
+                    <input type="text" name="category-name"
+                        class="w-full border border-gray-300 rounded p-2 focus:border-pink-500 focus:outline-none"
+                        id="add-category-input">
+                </div>
+                <!-- ADD CATEGORY BUTTON -->
+                <div>
+                    <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                        <span id="add-category-button">Agregar</span>
+                    </button>
+                </div>
+            </div>
+            <!-- CATEGORY LIST -->
+            <div class="flex justify-between mt-10">
+                <div id="category-list"></div>
+            </div>
+        </section>
+    </main>
+    <!--------------------------------------------EDIT CATEGORY-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="edit-category-section">
+        <!-- EDIT CATEGORY SECTION -->
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Editar categoría</h2>
+            <!-- EDIT CATEGORY FORM -->
+            <div>
+                <h3 class="text-lg font-bold">Nombre</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900"
+                            id="edit-category-input" />
+                    </div>
+                </div>
+            </div>
+            <!-- EDIT CATEGORY ACTIONS -->
+            <div class="flex self-end mt-2">
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2"
+                    onclick="editCategory()" id="confirm-edit-button">
+                    Editar
+                </button>
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2"
+                    onclick="cancelEditCategory()" id="cancel-category-button">
+                    Cancelar
+                </button>
+            </div>
+        </section>
+    </main>
+    <!--------------------------------------------REPORTS-------------------------------------------->
+    <main class="mx-auto my-12 hidden" id="reports-section">
+        <!-- NO REPORTS -->
+        <section class="max-w-2xl mx-auto rounded-lg mt-auto min-h-screen hidden" id="no-reports-section">
+            <div class="flex flex-col items-center shadow-xl">
+                <h2 class="text-4xl font-semibold">Reportes</h2>
+                <div>
+                    <figure class="place-content-center p-16">
+                        <img src="img/undraw_charts_re_5qe9.svg" alt="" class="w-full h-auto">
+                    </figure>
+                    <h4 class="pb-3 text-3xl font-semibold text-center">Operaciones insuficientes
+                    </h4>
+                    <p class="pb-6 text-lg font-extralight text-center">
+                        Prueba agregando más operaciones
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- WITH REPORTS (HARDCODED)-->
+        <section class="mx-auto max-w-6xl rounded-lg p-8 lg:p-12 xl:p-16 hidden" id="with-reports-section">
+            <h2 class="mb-4 font-black text-4xl lg:text-5xl">Reportes</h2>
+            <div class="mx-auto mt-8 lg:mt-12 xl:mt-16 p-4 lg:p-8 xl:p-12 shadow-xl">
+                <!-- DETAILS -->
+                <section class="space-y-4">
+                    <h4 class="text-lg font-semibold">Resumen</h4>
+                    <!-- HIGHEST PROFIT CATEGORY -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor ganancia</div>
+                        <div class="flex-1 text-right" id="categoria-mayor-ganancia">
+                            <!-- CATEGORY RENDER -->
+                        </div>
+                    </div>
+
+                    <!-- HIGHEST SPENDING CATEGORY -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor gasto</div>
+                        <div class="flex-1 text-right" id="categoria-mayor-gasto">
+                            <!-- CATEGORY RENDER -->
+                        </div>
+                    </div>
+
+                    <!-- GREATER BALANCE CATEGORY -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Categoría con mayor balance</div>
+                        <div class="flex-1 text-right" id="categoria-mayor-balance">
+                            <div class="flex items-center justify-between">
+                                <div class="w-2/3">
+                                    <span
+                                        class="px-2 py-1 text-xs text-orange-400 bg-orange-100 rounded-md whitespace-nowrap overflow-hidden">Category
+                                        placeholder</span>
+                                </div>
+                                <div class="w-1/3 flex items-end justify-end">
+                                    <span class="whitespace-nowrap overflow-hidden"
+                                        id="categoria-mayor-balance-total">$50000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HIGHEST PROFIT MONTH CATEGORY -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Mes con mayor ganancia</div>
+                        <div class="flex-1 text-right" id="mes-mayor-ganancia">
+                            <!--  CATEGORY RENDER -->
+                        </div>
+                    </div>
+
+                    <!-- HIGHEST SPENDING CATEGORY -->
+                    <div class="flex items-center p-1">
+                        <div class="font-semibold w-1/4">Mes con mayor gasto</div>
+                        <div class="flex-1 text-right" id="mes-mayor-gasto">
+                            <!-- CATEGORY RENDER -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TOTALS BY CATEGORY -->
+                <section class="space-y-4">
+                    <h4 class="text-lg font-semibold mt-12 pb-2">Totales por categoría</h4>
+                    <div class="flex items-center">
+                        <!-- CATEGORY SECTION -->
+                        <div class="w-1/4">
+                            <h4 class="font-semibold pb-2">Categoría</h4>
+                            <div class="flex items-center pt-2" id="totales-por-categoria">
+                                <!-- RENDER -->
+                            </div>
+                        </div>
+                        <!-- DETAILED RESUME SECTION -->
+                        <div class="w-3/4 flex space-x-4">
+                            <!-- PROFIT -->
+                            <div class="flex-1">
+                                <h4 class="pb-2 font-semibold text-right">Ganancias</h4>
+                                <div class="flex items-center justify-end p-2 text-green-600"
+                                    id="totales-categoria-ganancias">
+                                    <!-- RENDER -->
+                                </div>
+                            </div>
+                            <!-- EXPENSES -->
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-right pb-2">Gastos</h4>
+                                <div class="flex items-center justify-end pt-2 text-red-600"
+                                    id="totales-categoria-gastos">
+                                    <!-- -RENDER -->
+                                </div>
+                            </div>
+                            <!-- BALANCE -->
+                            <div class="flex-1">
+                                <h4 class="font-semibold text-right pb-2">Balance</h4>
+                                <div class="flex items-center justify-end pt-2" id="totales-categoria-balance">
+                                    <!--  RENDER -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- TOTALS BY MONTH -->
+                <section class="space-y-4">
+                    <h3 class="text-lg font-semibold mt-12">Totales por mes</h3>
+                    <div class="flex items-center">
+                        <!-- MONTH SECTION -->
+                        <div class="w-1/4">
+                            <h4 class="font-semibold">Mes</h4>
+                            <div class="flex items-center pt-2 font-semibold" id="totales-mes">
+                                <!-- RENDER -->
+                            </div>
+                        </div>
+                        <!-- DETAILED RESUME SECTION -->
+                        <div class="w-3/4 flex space-x-4">
+                            <!-- PROFIT -->
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Ganancias</h4>
+                                <div class="flex items-center justify-end pt-2 text-green-600"
+                                    id="totales-mes-ganancias">
+                                    <!-- RENDER -->
+                                </div>
+                            </div>
+                            <!-- EXPENSES -->
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Gastos</h4>
+                                <div class="flex items-center justify-end pt-2 text-red-600" id="totales-mes-gastos">
+                                    <!-- RENDER -->
+                                </div>
+                            </div>
+                            <!-- BALANCE -->
+                            <div class="flex-1 text-right">
+                                <h4 class="font-semibold">Balance</h4>
+                                <div class="flex items-center justify-end pt-2" id="totales-mes-balance">
+                                    <!-- RENDER -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="text-white text-center bg-pink-500 rounded">
+                <button id="download-button">
+                    Descargar reporte
+                </button>
+            </div>
+        </section>
+    </main>
+    <!--------------------------------------------NEW OP-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="new-operation-section">
+        <!-- NEW OPERATION SECTION -->
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Nueva operación</h2>
+            <!-- NEW OP FORM -->
+            <div>
+                <h3 class="text-lg font-bold">Descripción</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input type="text" id="description"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Monto</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input type="number" id="amount"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Tipo</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Gasto</option>
+                            <option value="">Ganancia</option>
+                        </select>
+
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Categoría</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Comida</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Fecha</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10 mb-4">
+                        <input type="date" id="date"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+            </div>
+            <!-- NEW OP ACTIONS -->
+            <div class="flex self-end">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2"
+                    id="cancel-operation-button">
+                    <span id="cancel-newoperation-button">Cancelar</span>
+                </button>
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                    <span id="add-newoperation-button">Agregar</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!--------------------------------------------EDIT OP-------------------------------------------->
+    <main class="flex items-center min-h-screen hidden" id="edit-operation-section">
+        <!-- EDIT OP SECTION -->
+        <section class="mx-auto md:w-4/5 lg:w-3/4 xl:w-2/3 2xl:w-1/2 p-8 shadow-xl flex flex-col">
+            <h2 class="mb-8 font-bold text-4xl">Editar operación</h2>
+            <!-- EDIT OP FORM -->
+            <div>
+                <h3 class="text-lg font-bold">Descripción</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Monto</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <input type="number"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Tipo</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Gasto</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Categoría</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10">
+                        <select
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900">
+                            <option value="">Comida</option>
+                        </select>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold">Fecha</h3>
+                <div class="w-full">
+                    <div class="relative w-full min-w-[200px] h-10 mb-4">
+                        <input type="date"
+                            class="peer w-full h-full bg-transparent text-pink-700 font-sans font-normal outline-pink-600  transition-all border focus:border  text-sm px-3 py-2.5 rounded-[7px] border-pink-600 focus:border-pink-900" />
+                    </div>
+                </div>
+            </div>
+            <!-- EDIT OP ACTIONS -->
+            <div class="flex self-end">
+                <button class="h-full text-sm text-white bg-yellow-400 hover:bg-yellow-500 rounded p-2 ml-2">
+                    <span id="cancel-editoperation-button">Cancelar</span>
+                </button>
+                <button class="h-full text-sm text-white bg-pink-500 hover:bg-pink-600 rounded p-2 ml-2">
+                    <span id="add-editoperation-button">Editar</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- project's script -->
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
